@@ -41,7 +41,7 @@ const Home = () => {
 
     useEffect(() => {
         getNotes();
-    },[]);
+    },[note]);
 
     // TO NAVIGATE AFTER LOG OUT
     useEffect(() => {
