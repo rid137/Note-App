@@ -1,0 +1,68 @@
+:root {
+    --background: #ffffff;
+    --text-primary: #000;
+    --text-secondary: #8e05c2;
+    --accent: #8e05c2;
+    --border: #333;
+    --form-bg: #fff;
+    --gray-bg: #ccc;
+
+}
+
+[data-theme='dark'] {
+    --background: #000;
+    --text-primary: #fff;
+    --text-secondary: #8e05c2;
+    --accent: #8e05c2;
+    --border: #808080;
+    --form-bg: #191919;
+    --gray-bg: #333;
+}
+
+.lazy-note-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    padding: 10px 5px 0;
+    background-color: var(--form-bg);
+    box-shadow: 0px 0px 5px var(--border);
+    border-radius: 5px;
+    position: relative;
+}
+
+
+
+.lazy-note-card h3 {
+    padding-top: 5px;
+}
+
+.lazy-note-card p {
+    text-align: justify;
+    margin: 18px 5px 60px;
+    line-height: 23px;
+}
+
+.lazy-note-card-footer {
+    position: absolute;
+    bottom: -50px;
+    left: 5px;
+    padding-top: 30px;
+    font-size: 1.3rem;
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .lazy-note-card {
+        width: 97%;
+    }
+
+    .lazy-note-card h3 {
+        font-size: .9rem;
+    }
+
+    .lazy-note-card p {
+        font-size: .8rem;
+    }
+}

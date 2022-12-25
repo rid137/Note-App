@@ -1,0 +1,115 @@
+:root {
+    --background: #ffffff;
+    --text-primary: #000;
+    --text-secondary: #8e05c2;
+    --accent: #8e05c2;
+    --border: #333;
+    --form-bg: #fff;
+    --gray-bg: #ccc;
+
+}
+
+[data-theme='dark'] {
+    --background: #000;
+    --text-primary: #fff;
+    --text-secondary: #8e05c2;
+    --accent: #8e05c2;
+    --border: #808080;
+    --form-bg: #191919;
+    --gray-bg: #333;
+}
+
+.write-container {
+    background-color: var(--background);
+    width: 100%;
+    height: 100vh;
+}
+
+.write {
+    font-family: 'Varela Round', sans-serif;
+    padding: 18px 50px;
+    overflow: hidden;
+    background-color: var(--background);
+    color: var(--text-primary);
+}
+
+.write h3 {
+    font-size: 1.9rem;
+    margin-bottom: 50px;
+    color: var(--accent);
+}
+
+.write form {
+    display: flex;
+    flex-direction: column;
+    /* width: 300px; */
+}
+
+.write form label {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.write form input {
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    background-color: var(--background);
+    color: var(--text-primary);
+}
+
+.write form textarea {
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    resize: none;
+    background-color: var(--background);
+    color: var(--text-primary);
+}
+
+.write form button {
+    width: 50%;
+    padding: 10px 0;
+    margin-top: 20px;
+    background-color: var(--accent);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+}
+
+.write form button:hover {
+    background-color: #c205c2;
+}
+
+@media screen and (max-width: 768px) {
+    .write {
+        padding: 18px 20px;
+    }
+    .write h3 {
+        font-size: 1.6rem;
+    }
+    .write form label {
+        font-size: 1.2rem;
+    }
+    .write form input {
+        font-size: 1rem;
+    }
+    .write form textarea {
+        font-size: 1rem;
+    }
+    .write form button {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .write form button {
+        font-size: 1rem;
+    }
+}

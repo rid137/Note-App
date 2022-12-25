@@ -1,0 +1,144 @@
+:root {
+    --background: #ffffff;
+    --text-primary: #000;
+    --text-secondary: #8e05c2;
+    --accent: #8e05c2;
+    --border: #333;
+    --form-bg: #fff;
+    --gray-bg: #ccc;
+
+}
+
+[data-theme='dark'] {
+    --background: #000;
+    --text-primary: #fff;
+    --text-secondary: #8e05c2;
+    --accent: #8e05c2;
+    --border: #808080;
+    --form-bg: #191919;
+    --gray-bg: #333;
+}
+
+.home-container {
+    font-family: 'Varela Round', sans-serif;
+    padding: 20px 50px;
+    background-color: var(--background);
+    color: var(--text-primary);
+    min-height: 100vh;
+    transition: all .5s;
+}
+
+.top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top .first {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.top .second {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+}
+
+.top .second > * {
+    font-weight: bold;
+    background-color: var(--gray-bg);
+    border-radius: 10px;
+    padding: 2px 10px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.top > .second > p > .add-note {
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+.top .second > *:hover {
+    letter-spacing: 1px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 30px;
+    background-color: #ccc;
+    padding: 15px 8px;
+    border-radius: 10px;
+}
+
+.search-bar input {
+    outline: none;
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+}
+
+.your-notes {
+    margin: 30px 0 20px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.notes {
+    width: 100%;
+    display: flex;
+    padding-left: 35px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .home-container {
+        padding: 18px 20px 18px 20px;
+    }
+    
+    .notes {
+        flex-direction: column;
+        gap: 30px;
+        padding-left: 0;
+        margin-bottom: 50px;
+    }
+
+    .top {
+        display: block;
+    }
+
+    .top .first {
+        margin-bottom: 30px;
+        font-size: 1.2rem;
+        /* width: 80%; */
+    }
+
+    .top .second {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .top .second > * {
+        font-size: .8rem;
+
+    }
+
+    .search-bar {
+        padding: 8px 4px;
+        /* width: 80%; */
+    }
+
+    .search-bar input {
+        font-size: 1rem;
+    }
+
+    .your-notes {
+        font-size: 1.1rem;
+    }
+}

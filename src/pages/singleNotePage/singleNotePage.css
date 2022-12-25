@@ -1,0 +1,89 @@
+:root {
+    --background: #ffffff;
+    --text-primary: #000;
+    --text-secondary: #8e05c2;
+    --accent: #8e05c2;
+    --border: #333;
+    --form-bg: #fff;
+    --gray-bg: #ccc;
+
+}
+
+[data-theme='dark'] {
+    --background: #000;
+    --text-primary: #fff;
+    --text-secondary: #8e05c2;
+    --accent: #8e05c2;
+    --border: #808080;
+    --form-bg: #191919;
+    --gray-bg: #333;
+}
+
+.single-note-container {
+    background-color: var(--background);
+    color: var(--text-primary);
+    font-family: 'Varela Round', sans-serif;
+    padding: 0px 20px 20px;
+    min-height: 100vh;
+}
+
+.single-note {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.single-note > p {
+    margin: 15px 0;
+    line-height: 23px;
+    text-align: justify;
+}
+
+.single-note > h2 {
+    margin-top: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.single-note-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.single-note-footer > p {
+    font-size: 1.5rem;
+}
+
+.single-note-footer .de-edit  .edit  {
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 5px;
+    color: var(--text-primary);
+}
+
+.single-note-footer .de-edit  .delete {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .single-note > p {
+        font-size: .9rem;
+    }
+
+    .single-note > h2 {
+        font-size: 1.3rem;
+    }
+
+    .single-note-footer > p {
+        font-size: 1.2rem;
+    }
+
+    .single-note-footer .de-edit > .edit,
+     .single-note-footer .de-edit > .delete {
+        font-size: 1.2rem;
+    }
+}
