@@ -20,7 +20,7 @@
 .register-wrapper {
   background-color: var(--background);
   color: var(--text-primary);
-  height: 100vh;
+  /* height: 100vh; */
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -28,11 +28,12 @@
   font-size: .8rem;
   transition: all .5s;
   font-family: 'Varela Round', sans-serif;
+  padding-bottom: 30px;
 }
 
 .register h1 {
   text-align: center;
-  margin-top: -1rem;
+  margin-top: 1rem;
   font-size: 40px;
 }
 
@@ -119,18 +120,18 @@ input[type=checkbox]:checked {
   cursor: pointer;
 }
 
-.register > .container > .footer > p  {
+.register > .container > .register-footer > p  {
   text-align: center;
 }
 
-.register > .container > .footer > p:first-child {
+.register > .container > .register-footer > p:first-child {
   color: var(--text-secondary);
   margin-bottom: 5px;
   font-size: .8rem;
   cursor: pointer;
 }
 
-.register > .container > .footer > p:nth-child(2) > span { 
+.register > .container > .register-footer > p:nth-child(2) > span { 
   color: var(--text-secondary);
   cursor: pointer;
 }

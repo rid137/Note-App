@@ -142,3 +142,9 @@
         font-size: 1.1rem;
     }
 }
+
+@media screen and (max-width: 330px) {
+    .top .second {
+        gap: 20px;
+    }
+}

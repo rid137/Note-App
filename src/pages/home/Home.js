@@ -34,14 +34,14 @@ const Home = () => {
     };
 
     // TO GET NOTES FROM FIREBASE
-    useEffect(() => {
-        getNotes();
-    },[note]);
-
     const getNotes = async () => {
         const data = await getDocs(collectionRef)
         setNote(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
     };
+
+    useEffect(() => {
+        getNotes();
+    },[]);
 
     // TO NAVIGATE AFTER LOG OUT
     useEffect(() => {

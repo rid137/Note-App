@@ -4,13 +4,12 @@ import { getFirestore } from 'firebase/firestore';
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBGe_aAJqLt8YxToR6_anAasc2qtFDgbVE",
-  authDomain: "my-note-app-e52a0.firebaseapp.com",
-  projectId: "my-note-app-e52a0",
-  storageBucket: "my-note-app-e52a0.appspot.com",
-  messagingSenderId: "118394705337",
-  appId: "1:118394705337:web:1494cbc81bcd9b56a69268",
-  measurementId: "G-TYRWH7WWE4"
+  apiKey: "AIzaSyAVkCjhrw7QqYXgYyRf5sQ4eC8szyF9Qfw",
+  authDomain: "new-note-app-dfd7c.firebaseapp.com",
+  projectId: "new-note-app-dfd7c",
+  storageBucket: "new-note-app-dfd7c.appspot.com",
+  messagingSenderId: "453679516387",
+  appId: "1:453679516387:web:3495671fa64a913d4a93d6"
 };
 
 
@@ -20,4 +19,3 @@ const app = initializeApp(firebaseConfig);
 
 export const auth = getAuth(app);
 export const db = getFirestore(app);
-

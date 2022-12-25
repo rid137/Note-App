@@ -25,12 +25,6 @@ const SingleNotePage = () => {
     const docRef = doc(db, "notes", id);
 
 
-    useEffect(() => {
-        if(id) {
-          getSingleNote()
-        }
-    }, [id])
-
     // TO GET SINGLE NOTE FROM FIRESTORE DATABASE
     const getSingleNote = async () => {
         const docSnap = await getDoc(docRef);
@@ -44,6 +38,13 @@ const SingleNotePage = () => {
             console.log("No such document!");
         }
     }
+
+    useEffect(() => {
+        if(id) {
+          getSingleNote()
+        }
+    }, [id, singleNote])
+
 
     const deleteNote = (id) => {
         if(window.confirm("Are you sure you want to delete this post?")) {

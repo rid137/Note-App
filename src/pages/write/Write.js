@@ -24,7 +24,7 @@ const Write = () => {
   useEffect(() => {
     if(id) {
       setEditMode(true)
-      getSingleNote(id)
+      getNoteToUpdate(id)
     }
     else {
       setEditMode(false)
@@ -33,7 +33,7 @@ const Write = () => {
   }, [id]);
 
   // TO GET SINGLE NOTE FOR UPDATE
-  const getSingleNote = async () => {
+  const getNoteToUpdate = async () => {
     const docSnap = await getDoc(doc(db, "notes", id));
     if (docSnap.exists()) {
       setData(docSnap.data())

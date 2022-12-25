@@ -65,7 +65,6 @@ const Register = () => {
   return (
     <div>
       <div className="register-wrapper" data-theme={theme}>
-      {console.log(theme)}
       <div className='register'>
         <h1> Create Account </h1>
         <div className='container'>
@@ -98,7 +97,7 @@ const Register = () => {
             </div>
             <button onClick={handleEmailPasswordSignUp}>Sign Up</button>
           </form>
-          <div className='footer'>
+          <div className='register-footer'>
             <p>Why Create an Account?</p>
             <p>By creating this account, you agree to our <span>Privacy Policy</span> & <span>Cookie Policy</span>.</p>
           </div>
