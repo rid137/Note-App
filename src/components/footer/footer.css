@@ -26,7 +26,9 @@
     border-top: 0.05px solid var(--text-primary);
     font-family: 'Varela Round', sans-serif;
     padding: 30px 0;
-    
+    /* position: absolute;
+    bottom: 0;
+    left: 0; */
 }
 
 .footer-list ul {
@@ -67,5 +69,11 @@
     }
     .footer-copyright {
         font-size: .9rem;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .footer-list ul {
+        gap: 35px;
     }
 }

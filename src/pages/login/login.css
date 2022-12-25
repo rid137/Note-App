@@ -25,7 +25,7 @@
 .app {
   background-color: var(--background);
   color: var(--text-primary);
-  height: 100vh;
+  /* height: 100vh; */
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -38,6 +38,7 @@
 .login h1 {
   text-align: center;
   font-size: 48px;
+  margin-top: 1rem;
 }
   
 .theme-toggle > h2 {
