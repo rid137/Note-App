@@ -15,8 +15,8 @@ const Footer = () => {
     <div className='footer' data-theme={theme} >
         <div className="footer-list">
             <ul>
-                <li><a href="#"> <FaGithubSquare /> </a></li>
-                <li><a href="#"> <FaTwitterSquare /> </a></li>
+                <li><a href="https://github.com/roycoMedia"> <FaGithubSquare /> </a></li>
+                <li><a href="https://twitter.com/roycoMedia73"> <FaTwitterSquare /> </a></li>
                 <li><a href="#"> <BsLinkedin /> </a></li>
             </ul>
         </div>
