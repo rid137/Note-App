@@ -104,7 +104,7 @@
     
     .notes {
         flex-direction: column;
-        gap: 30px;
+        /* gap: 30px; */
         padding-left: 0;
         margin-bottom: 50px;
     }
@@ -120,8 +120,8 @@
     }
 
     .top .second {
-        flex-direction: column;
-        /* gap: 15px; */
+        /* flex-direction: column; */
+        gap: 15px;
     }
 
     .top .second > * {
