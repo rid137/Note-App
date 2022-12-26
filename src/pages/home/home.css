@@ -143,8 +143,15 @@
     }
 }
 
-@media screen and (max-width: 330px) {
+@media screen and (max-width: 370px) {
     .top .second {
-        gap: 20px;
+        gap: 25px;
+    }
+
+    .notes {
+        flex-direction: column;
+        gap: 40px;
+        padding-left: 0;
+        margin-bottom: 50px;
     }
 }
