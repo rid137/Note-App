@@ -124,7 +124,8 @@
 
     .top .second > * {
         font-size: .8rem;
-        
+        margin-right: 10px;
+
     }
 
     .search-bar {
