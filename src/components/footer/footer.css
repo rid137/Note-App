@@ -72,8 +72,8 @@
     }
 }
 
-@media screen and (max-width: 330px) {
+@media screen and (max-width: 370px) {
     .footer-list ul {
-        gap: 35px;
+        gap: 40px;
     }
 }

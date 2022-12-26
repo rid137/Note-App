@@ -2,7 +2,7 @@ import './login.css';
 import ReactSwitch from 'react-switch';
 import { useEffect, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword, signInWithPopup, FacebookAuthProvider, signInWithRedirect } from "firebase/auth";
 import { auth } from '../../Firebase-config';
 import { UserAuth } from '../../components/context/AuthContext'
 import { BsGoogle } from "react-icons/bs";
@@ -36,16 +36,48 @@ const Login = () => {
       console.log(errorMessage)
       // ..
     });
-  }    
+  }  
+  
+  const provider = new FacebookAuthProvider();
+
+
+const handleFacebookSignIn = () => {
+  // signInWithPopup(auth, provider)
+  signInWithRedirect(auth, provider)
+  .then((result) => {
+    // The signed-in user info.
+    const userDetails = result.user;
+    setUser(userDetails)
+
+    // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+    const credential = FacebookAuthProvider.credentialFromResult(result);
+    const accessToken = credential.accessToken;
+
+    // ...
+  })
+  .catch((error) => {
+    // Handle Errors here.
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // The email of the user's account used.
+    const email = error.customData.email;
+    // The AuthCredential type that was used.
+    const credential = FacebookAuthProvider.credentialFromError(error);
+
+    // ...
+  });
+}
+
+
       
-  const handleFacebookSignIn = async () => {
-    try {
-      await facebookSignIn()
-    }
-    catch(error) {
-      console.log(error)
-    }
-  }
+  // const handleFacebookSignIn = async () => {
+  //   try {
+  //     await facebookSignIn()
+  //   }
+  //   catch(error) {
+  //     console.log(error)
+  //   }
+  // }
 
   const handleGoogleSignIn = async () => {
       try {
