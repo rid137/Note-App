@@ -30,6 +30,7 @@ const SingleNotePage = () => {
         const docSnap = await getDoc(docRef);
         if (docSnap.exists()) {
             setSingleNote(docSnap.data())
+            console.log("singleNote:", singleNote)
             setHasLoadTime(true)
         } 
         
@@ -43,7 +44,7 @@ const SingleNotePage = () => {
         if(id) {
           getSingleNote()
         }
-    }, [id, singleNote])
+    }, [id])
 
 
     const deleteNote = (id) => {

@@ -17,7 +17,7 @@ const Register = () => {
   const [confirmPasswordErrMsg, setConfirmPasswordErrMsg] = useState(false)
 
 
-  const { googleSignIn, user, setUser, theme } = UserAuth()
+  const { googleSignIn, user, setUser, theme, facebookSignIn } = UserAuth()
 
   const navigate = useNavigate()
 
@@ -54,6 +54,15 @@ const Register = () => {
     }
   }
 
+  const handleFacebookSignIn = async () => {
+    try {
+      await facebookSignIn()
+    }
+    catch(error) {
+      console.log(error)
+    }
+  }
+
 
   useEffect(() => {
     if(user != null) {
@@ -70,7 +79,7 @@ const Register = () => {
         <div className='container'>
           <div className='top'>
             <BsGoogle onClick={handleGoogleSignIn} />
-            <FaFacebookSquare />
+            <FaFacebookSquare onClick={handleFacebookSignIn} />
             <AiFillTwitterSquare />
           </div>
           <p className='divider'><span>Or</span></p>
