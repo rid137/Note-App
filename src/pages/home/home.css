@@ -143,7 +143,7 @@
     }
 }
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 420px) {
     .top .second {
         gap: 25px;
     }
