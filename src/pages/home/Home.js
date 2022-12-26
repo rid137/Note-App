@@ -3,7 +3,7 @@ import LazyNoteCard from '../../components/lazyNoteCard/LazyNoteCard';
 import React, { useEffect, useState, Suspense } from 'react';
 import { UserAuth } from '../../components/context/AuthContext';
 import { db } from '../../Firebase-config';
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, doc, getDocs, onSnapshot, query, where } from 'firebase/firestore';
 import { useNavigate, Link } from 'react-router-dom';
 import { BsSearch } from "react-icons/bs";
 
@@ -22,6 +22,8 @@ const Home = () => {
     // TO REFER TO THE 'NOTES' COLLECTION ON FIREBASE
     const collectionRef = collection(db, 'notes');
 
+    // const noteQuery = query(collectionRef, where("user.uid", "=", "uid"))
+
     const handleSignOut = async () => {
         try {
             if(window.confirm('Are you sure you want to log out?')) {
@@ -34,14 +36,21 @@ const Home = () => {
     };
 
     // TO GET NOTES FROM FIREBASE
-    const getNotes = async () => {
-        const data = await getDocs(collectionRef)
-        setNote(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
+    const getNotes =  () => {
+        // const data = await getDocs(collectionRef)
+        onSnapshot(collectionRef, (data) => {
+            setNote(data.docs.map((doc) => {
+                return ({...doc.data(), id: doc.id})
+            }))
+            console.log("note:", note)
+        })
     };
+
+    // setNote(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
 
     useEffect(() => {
         getNotes();
-    }, [note]);
+    }, []);
 
     // TO NAVIGATE AFTER LOG OUT
     useEffect(() => {

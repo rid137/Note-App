@@ -15,6 +15,7 @@ const NoteCard = ({item}) => {
 
     const { user } = UserAuth()
 
+
     // DELETE NOTE
     const deleteNote = (id) => {
         if(window.confirm("Are you sure you want to delete this post?")) {
@@ -47,6 +48,8 @@ const NoteCard = ({item}) => {
             user && item.id !== null && user.uid === item.uid && item && (
                 <div className="note-card">
                     <div className="overlay">
+                    {console.log("item",item)}
+
                         <div className="overlay-content">
                             <button className='overlay-btn'> <Link to={`/note/${item.id}`} className='read-more'> Read more </Link> </button>
                             <div className="del-edit">

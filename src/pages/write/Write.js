@@ -37,6 +37,7 @@ const Write = () => {
     const docSnap = await getDoc(doc(db, "notes", id));
     if (docSnap.exists()) {
       setData(docSnap.data())
+      console.log("data:", data)
     } 
     else {
       // doc.data() will be undefined in this case
