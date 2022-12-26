@@ -146,6 +146,7 @@
 @media screen and (max-width: 768px) {
     .note-card {
         width: 97%;
+        margin-bottom: 20px;
     }
 
     .note-card h3 {
