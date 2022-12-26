@@ -97,7 +97,7 @@
 }
 
 
-@media screen and (max-width: 768px) {
+@media only screen and (min-width: 360px) and (max-width: 768px) {
     .home-container {
         padding: 18px 20px 18px 20px;
     }
@@ -143,11 +143,11 @@
     }
 }
 
-@media screen and (max-width: 420px) {
-    /* .top .second {
+/* @media screen and (max-width: 420px) {
+    .top .second {
         gap: 25px;
 
-    } */
+    }
 
     .notes {
         flex-direction: column;
@@ -155,4 +155,8 @@
         padding-left: 0;
         margin-bottom: 50px;
     }
-}
+} */
+
+/* @media only screen and (min-width: 360px) and (max-width: 767px) {  */
+
+ /* } */
