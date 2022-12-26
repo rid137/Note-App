@@ -119,12 +119,12 @@
 
     .top .second {
         justify-content: unset;
-        gap: 15px;
+        /* gap: 15px; */
     }
 
     .top .second > * {
         font-size: .8rem;
-
+        
     }
 
     .search-bar {
