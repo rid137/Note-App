@@ -63,17 +63,12 @@
 @media screen and (max-width: 768px) {
     .footer-list ul li {
         font-size: 1rem;
+        gap: 30px;
     }
     .footer-list ul li:not(:last-of-type) {
         font-size:1.2rem;
     }
     .footer-copyright {
         font-size: .9rem;
-    }
-}
-
-@media screen and (max-width: 420px) {
-    .footer-list ul {
-        gap: 40px;
     }
 }

@@ -104,7 +104,6 @@
     
     .notes {
         flex-direction: column;
-        /* gap: 30px; */
         padding-left: 0;
         margin-bottom: 50px;
     }
@@ -116,11 +115,10 @@
     .top .first {
         margin-bottom: 30px;
         font-size: 1.2rem;
-        /* width: 80%; */
     }
 
     .top .second {
-        /* flex-direction: column; */
+        justify-content: unset;
         gap: 15px;
     }
 
@@ -157,6 +155,46 @@
     }
 } */
 
-/* @media only screen and (min-width: 360px) and (max-width: 767px) {  */
+@media only screen and  (max-width: 359px) { 
+    .home-container {
+        padding: 18px 20px 18px 20px;
+    }
+    
+    .notes {
+        flex-direction: column;
+        padding-left: 0;
+        margin-bottom: 50px;
+    }
 
- /* } */
+    .top .second {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .top {
+        display: block;
+    }
+
+    .top .first {
+        margin-bottom: 30px;
+        font-size: 1.2rem;
+    }
+
+    .top .second > * {
+        font-size: .8rem;
+
+    }
+
+    .search-bar {
+        padding: 8px 4px;
+        /* width: 80%; */
+    }
+
+    .search-bar input {
+        font-size: 1rem;
+    }
+
+    .your-notes {
+        font-size: 1.1rem;
+    }
+}
