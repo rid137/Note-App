@@ -74,10 +74,10 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="search-bar">
-                    <span> <BsSearch /> </span>
+                    {/* <span> <BsSearch /> </span> */}
                     <input 
                         type="search" 
-                        placeholder='type to search...' 
+                        placeholder='Search for note...' 
                         onChange={(e) => setSearch(e.target.value)}
                     />
                 </div>
